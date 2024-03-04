@@ -1,0 +1,48 @@
+
+.news-container {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    max-width: 70%; /* Setze die gewünschte maximale Breite des Inhalts */
+    margin: 20px auto; /* Zentriere den Container horizontal */
+}   
+.news-q-text{
+    padding-bottom: 30px;
+}
+
+.news-dropdown {
+    border-radius: 10px;
+    border: 1px solid #ddd; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, border-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+  
+  .news-question {
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .news-arrow {
+    position: absolute;
+    color: black;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-out;
+  }
+  
+  .open .news-arrow {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  
+  .news-answer {
+    padding: 10px;
+    background-color: #262626;
+  }
+  
+  

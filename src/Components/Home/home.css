@@ -1,0 +1,230 @@
+/* home.css */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap');
+
+
+
+.main-container {
+    margin: 0;
+    padding: 0;
+    background-image: url('../../Assets/background.png');
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-container h1,
+h2,
+p {
+    color: white;
+    font-family: 'Outfit', sans-serif;
+}
+
+.main-container-image-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Ändere auf flex-start, damit die Elemente oben ausgerichtet sind */
+}
+
+.main-container-image-content-block-1 {
+    background-image: url('../../Assets/x5.jpg');
+    margin: 40px 30px 15px 0px;
+    /* Etwas Abstand zwischen den Bildern */
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.main-container-image-content-block-2 {
+    background-image: url('../../Assets/lossantos.jpeg');
+    margin: 90px 0px 15px 30px;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.main-contianer-image-content-block-text {
+    background-color: rgba(0, 0, 0, 0.445);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.main-contianer-image-content-block-text p {
+    color: rgb(211, 117, 255);
+}
+
+.main-contianer-image-content-block-text h1,
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-container-text-content {
+    display: flex;
+    flex-wrap: wrap;
+    /* Textinhalte auf mehrere Zeilen umbrechen */
+    justify-content: center;
+}
+
+.main-container-text-content-1 {
+    margin: 20px;
+    width: 400px;
+    /* Breite der Textblöcke, passend zu den Bildern */
+}
+
+
+.main-container-live-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container-live-header {
+    margin-bottom: 20px;
+}
+
+.main-container-live-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.livestream-window {
+    width: 100%;
+    /* Adjusted to 100% for responsiveness */
+    max-width: 350px;
+    /* Set a maximum width to avoid stretching on larger screens */
+    height: 200px;
+    border: 1px solid #ccc;
+    margin: 0 15px 15px 15px;
+    /* Added a bottom margin for spacing between streams */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+@keyframes scroll {
+    0% {
+      transform: translateX();
+    }
+    100% {
+      transform: translateX(calc(-150px * 6)); /* Anzahl der Slides * Slide-Breite */
+    }
+  }
+  
+  .slider {
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+    padding-bottom: 100px;
+  }
+  
+  .slider::before,
+  .slider::after {
+    background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+  
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+  
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  
+  .slider .slide-track {
+    animation: scroll 20s linear infinite;
+    display: flex;
+    width: calc(100% * 2); /* Setzt die Breite auf das Doppelte des Inhalts */
+  }
+  
+  .slider .slide {
+    height: 100px;
+    width: 150px; /* An die tatsächliche Breite deiner Slides anpassen */
+  }
+  
+.slider .slide img {
+    height: 100px;
+    width: 100px; 
+}
+  
+  
+
+
+@media only screen and (max-width: 950px) {
+    .main-container {
+        height: auto;
+        /* Ändere auf automatische Höhe für kleinere Bildschirme */
+    }
+
+    .main-container-image-content {
+        flex-direction: column;
+        /* Ändere auf Spalte für kleinere Bildschirme */
+    }
+
+    .main-container-image-content-block-1,
+    .main-container-image-content-block-2 {
+        width: 100%;
+        /* Vollständige Breite für kleinere Bildschirme */
+        margin: 0 0 15px 0;
+        /* Entferne seitlichen Abstand und füge einen unteren Abstand hinzu */
+    }
+
+    .main-container-text-content-1 {
+        width: 100%;
+        /* Vollständige Breite für kleinere Bildschirme */
+        margin: 30px;
+    }
+
+    .main-container-live-content {
+        margin: 40px;
+        height: auto;
+        /* Automatische Höhe für kleine Bildschirme */
+    }
+
+    .main-container-live-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        /* Zwei Streams nebeneinander */
+        gap: 15px;
+        /* Abstand zwischen den Streams */
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        /* Vollständige Breite für kleine Bildschirme */
+    }
+
+    .livestream-window {
+        width: 100%;
+        /* Vollständige Breite der Container für kleine Bildschirme */
+        height: 200px;
+        /* Höhe beibehalten */
+        max-width: none;
+        /* Entferne die maximale Breite */
+        margin: 0 0 10px 0;
+        /* Füge einen unteren Abstand hinzu */
+    }
+}

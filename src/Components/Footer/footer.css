@@ -1,0 +1,68 @@
+.footer-main{
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box; /* Inklusive Padding und Border in der Höhe berechnen */
+}
+
+.footer-content{
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-content {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-content h2 {
+    font-size: 18px;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-content ul li {
+    margin-bottom: 10px;
+}
+
+.footer-content a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out; /* Smooth transition over 0.3 seconds */
+  }
+  
+  .footer-link:hover {
+    color: rgb(211, 117, 255); /* Purple color on hover */
+  }
+  
+
+.copyright {
+    flex: 1 0 100%; /* Sorgt dafür, dass das Urheberrecht die gesamte Breite einnimmt */
+    margin-top: 20px; /* Füge einen oberen Abstand hinzu */
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content {
+        flex: 1 0 100%;
+        max-width: none; 
+        text-align: center; 
+        margin-bottom: 15px; 
+    }
+}

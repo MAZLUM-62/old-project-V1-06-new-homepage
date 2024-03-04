@@ -1,0 +1,52 @@
+.team-content {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  max-width: 70%; /* Setze die gewünschte maximale Breite des Inhalts */
+  margin: 20px auto; /* Zentriere den Container horizontal */
+  }
+  
+  .team-content-header {
+    text-align: center;
+  }
+  
+ 
+  .team-content-member-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .team-window {
+    width: 40%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Entferne die Aufzählungspunkte */
+  .team-window ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .spline-object {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: -100px;
+    height: 350px;
+    cursor: cell;
+    
+  }
+
+  
+  @media only screen and (max-width: 768px) {
+    .team-content {
+      width: 100%;
+    }
+  
+    .team-window {
+      width: 100%;
+    }
+  } 

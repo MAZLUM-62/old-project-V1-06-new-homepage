@@ -1,0 +1,30 @@
+.overlay-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+  }
+  
+  .discord-button {
+    background-color: rgb(211, 117, 255);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 30px;
+    display: flex;
+    margin: 15px;
+    align-items: center;
+    background-image: url('./../../Assets/icon_clyde_black_RGB.png');
+    background-size: contain; /* Hier wurde die Änderung vorgenommen */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+  }
+  
+  .discord-button span {
+    font-size: 16px;
+  }
+  
